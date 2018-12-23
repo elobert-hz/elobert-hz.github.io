@@ -1,0 +1,100 @@
+body {
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  display: compact;
+  color: rgba(220, 220, 220, 1);
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, .8);
+}
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,.6) 20%, rgba(0,0,0,.6) 70%, rgba(0,0,0,1) 100%), url('../images/kreide.png');
+  background-position: center top;
+  background-color: #000;
+  -webkit-filter: grayscale(100%) sepia(100%) hue-rotate(-160deg) saturate(200%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+
+a {
+  text-decoration:none;
+  color: #aaa;
+  transition: ease-in-out .15s;
+}
+
+a:hover {
+  text-decoration:none;
+	color: #fff;
+}
+
+input {
+	color: #333;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.overflow-hidden { overflow: hidden; }
+
+@font-face {
+	font-family: Gabriola;
+	src: url('../fonts/gabriola.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.fancy-font {
+	font-family: Gabriola;
+}
+
+h1 {
+	font-family: Gabriola;
+}
+
+.huge-hdr {
+	font-size: 150px;
+}
+
+.link-box {
+	border-radius: 8px;
+	background-color: rgba(40, 40, 40, .8);
+	margin: 20px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.link-box:hover {
+  background-color: rgba(70, 70, 70, .8);
+}
+
+.map {
+	width: 100%;
+	/*-webkit-filter: grayscale(100%) sepia(100%) brightness(0.6) hue-rotate(60deg);*/
+}
+
+ul {
+  margin: 0% 5%;
+  padding: 0;
+}
