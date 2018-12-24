@@ -14,4 +14,8 @@ function getCookie(cname) {
   return "";
 } 
 
-$("#stylesheet").attr("href", "css/" + getCookie("group") + ".css");
+var group = getCookie("group");
+if (!group) {
+  group = "r";
+}
+$("#stylesheet").attr("href", "css/" + group + ".css");
