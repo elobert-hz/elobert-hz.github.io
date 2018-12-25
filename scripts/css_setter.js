@@ -15,7 +15,9 @@ function getCookie(cname) {
 } 
 
 var group = getCookie("group");
-if (!group) {
+if (['r', 'g', 'b'].indexOf(group) < 0) {
   group = "r";
+  document.cookie = "group=r";
 }
+
 $("#stylesheet").attr("href", "css/" + group + ".css");

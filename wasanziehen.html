@@ -33,8 +33,8 @@
 		Für die bunten Ideen die wir haben wäre es gut, wenn man an eurem Outfit erkennen kann, zu welcher Farb-Gruppe ihr gehört. Das geht natürlich auf verschiedene Arten - hier ein paar Beispiele für Leute aus der rot-orange Farbgruppe:
 	</div>
 	<ul>
-		<li> Komplett in schwarz mit roten Socken und roter Krawatte? Perfekt!</li>
-		<li> Komplett in rot/orange gestreift? Mutig, und super gut!</li>
+		<li> Komplett in schwarz mit <span id="li11">roten</span> Socken und <span id="li12">roter</span> Krawatte? Perfekt!</li>
+		<li> Komplett in <span id="li2">rot/orange</span> gestreift? Mutig, und super gut!</li>
 		<li> Nur in schwarz-weiß? Gerne, falls Ihr doch Lust auf Farbe bekommt haben wir ein paar Notfall-Accessoires.</li>
 		<li> Das grüne Kleid mit der roten Kette? Dann könnte es passieren, dass ihr falsch eingeordnet werdet - nämlich zur grünen Gruppe. Trotzdem dürft ihr natürlich anziehen was ihr wollt. Hauptsache ihr kommt und habt Spaß.</li>
 	</ul>
@@ -43,6 +43,39 @@
 		Überhaupt gilt: Zieht an worin ihr euch wohl fühlt! Es wird alles zwischen <a href="wasmachen.html">Kletterklamotten</a> und Hochzeitskleid geben, ihr seid also auf keinen Fall Over- oder Underdressed. 
 	</div>
 </div>
+
+<script type="text/javascript">
+	function getCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	} 
+
+	var group = getCookie("group");
+	if (group == "r") {
+		$("#li11").html("roten");
+		$("#li12").html("roter");
+		$("#li2").html("rot/orange");
+	} else if (group == "g") {
+		$("#li11").html("grünen");
+		$("#li12").html("grüner");
+		$("#li2").html("grün/gelb");
+	} else {
+		$("#li11").html("blauen");
+		$("#li12").html("blauer");
+		$("#li2").html("blau/lila");
+	}
+</script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
