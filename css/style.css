@@ -41,9 +41,11 @@ input {
 	color: #333;
 }
 
+/*
 .container {
   max-width: 60%;
 }
+*/
 
 .site-header {
   background-color: rgba(0, 0, 0, .85);
