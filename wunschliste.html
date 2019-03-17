@@ -6,9 +6,26 @@
 	<title>Elobert</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link id="stylesheet" href="css/style.css" rel="stylesheet">
-
+	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="scripts/css_setter.js"></script>
+
+	<style>
+		#wunschliste {
+			width: 657px;
+			height: 201px;
+			border: none;
+		}
+		#iframeDiv {
+		}
+		#frameDummy {
+		  position: absolute;
+		  top: 0px;
+		  bottom: 0px;
+		  left: 0px;
+		  right: 0px;
+		}
+	</style>
 </head>
 <body>
 
@@ -19,34 +36,32 @@
 		<a class="py-2 d-none d-md-inline-block" href="index.html">Hauptseite</a>
 		<a class="py-2 d-none d-md-inline-block" href="rueckmeldung.html">Rückmeldung</a>
 		<a class="py-2 d-none d-md-inline-block" href="wo.html">Karte</a>
-		<a class="py-2 d-none d-md-inline-block" href="wunschliste.html">Wunschliste</a>
-		<a class="py-2 d-none d-md-inline-block" href="#">Kontakt</a>
+		<a class="py-2 d-none d-md-inline-block" href="#">Wunschliste</a>
+		<a class="py-2 d-none d-md-inline-block" href="kontakt.html">Kontakt</a>
 	</div>
 </nav>
 
 <div class="container">
 	<div class="py-5 text-center">
-		<h1>Kontakt</h1>
-		<div class="m-5">
-			Wenn ihr weitere Fragen habt könnt ihr uns gerne unter
-			<a id='adr'><div id="adress"></div></a>
-			kontaktieren.
-			
-			<div class="m-4">
-				Für geheime Pläne ist Anna (Elisas Schwester) zuständig. Wie ihr sie oder uns erreichen könnt steht auf der Einladung.
-			</div>
+		<h1>Wunschliste</h1>
+	</div>
+
+	<center>
+		<div id="iframeDiv">
+			<iframe id="wunschliste" onclick="executeOnClick()" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAo1NrFm1LNp4xaF00rqZtuyVQmViS5dZ-lLHPpV5dT-iLYHf5TyKSFhK96k_0gQIg_LcYcWsxpwi6/pubhtml?gid=1386834576&single=true&chrome=false&range=A1:C5&widget=false&headers=false"></iframe>
+			<div id="frameDummy"></div>
 		</div>
-		<script type="text/javascript">
-			var adr = 'elo' + 'bert';
-			var dom = 'prot' + 'onmail';
-			var tld = 'com';
-			$('#adress').html(adr + '@' + dom + '.' + tld);
-			$('#adr').attr('href', 'mai' + 'lt' + 'o:/' + '/' + adr + '@' + dom + '.' + tld + '?subject=Frage');
-			console.log($('#adress'));
-		</script>
-	  </div>
+	</center>
 </div>
 
+<script>
+	var frameDiv = document.getElementById("iframeDiv");
+	frameDiv.addEventListener("click", function(e) {
+		window.open("https://docs.google.com/spreadsheets/d/1AKnCsrXwENqrhwiC3XTtBz2NVH1vnP6eKdJVkxaCUpY/edit?usp=sharing", '_blank');
+	});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
