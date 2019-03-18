@@ -17,13 +17,14 @@
 			border: none;
 		}
 		#iframeDiv {
+			position: relative;
 		}
 		#frameDummy {
 		  position: absolute;
-		  top: 0px;
-		  bottom: 0px;
-		  left: 0px;
-		  right: 0px;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
 		}
 	</style>
 </head>
@@ -46,15 +47,27 @@
 		<h1>Wunschliste</h1>
 	</div>
 
-	<center>
-		<div id="iframeDiv">
-			<iframe id="wunschliste" onclick="executeOnClick()" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAo1NrFm1LNp4xaF00rqZtuyVQmViS5dZ-lLHPpV5dT-iLYHf5TyKSFhK96k_0gQIg_LcYcWsxpwi6/pubhtml?gid=1386834576&single=true&chrome=false&range=A1:C5&widget=false&headers=false"></iframe>
+	<div class="text-center">
+		<div class="mb-3">
+			Wir sind zwar schon vollauf zufrieden wenn ihr kommt (und vielleicht einen Kuchen mitbringt), aber für die Schenkwütigen unter euch haben wir uns mal Gedanken gemacht:
+		</div>
+		
+		<div id="iframeDiv" class="mb-5">
+			<iframe id="wunschliste" onclick="executeOnClick()" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAo1NrFm1LNp4xaF00rqZtuyVQmViS5dZ-lLHPpV5dT-iLYHf5TyKSFhK96k_0gQIg_LcYcWsxpwi6/pubhtml?gid=1386834576&single=true&chrome=false&widget=false&headers=false"></iframe>
 			<div id="frameDummy"></div>
 		</div>
-	</center>
+		
+		<div class="mb-5">
+			Das sind auch größere Sachen, tut euch also gerne beim Schenken zusammen!
+			Abgesehen davon freuen wir uns immer, was mit euch zu unternehmen - von Oper bis Paintball.
+		</div>
+	</div>
+		
+	</div>	
 </div>
 
 <script>
+	document.getElementById("iframeDiv").style.cursor = "pointer"; 
 	var frameDiv = document.getElementById("iframeDiv");
 	frameDiv.addEventListener("click", function(e) {
 		window.open("https://docs.google.com/spreadsheets/d/1AKnCsrXwENqrhwiC3XTtBz2NVH1vnP6eKdJVkxaCUpY/edit?usp=sharing", '_blank');
