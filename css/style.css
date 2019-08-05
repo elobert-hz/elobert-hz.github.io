@@ -110,3 +110,10 @@ ul {
   margin: 0% 5%;
   padding: 0;
 }
+
+.table-borderless {
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
